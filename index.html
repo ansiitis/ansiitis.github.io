@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <title>hansel &Aacute; gretel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Content/bootstrap.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+    <script src="Scripts/MyGoogleMaps.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+   
+    <meta name="google-signin-client_id" content="349310728347-l8n0e57al2hr3tdhupghp8m3novdema0.apps.googleusercontent.com">
+
+    
+</head>
+<body style="font-family: 'Lato', sans-serif;">
+
+
+
+    <div class="container">
+        <div class="jumbotron"></div>
+        <div class="row">
+            <div class="col-md-12 img-rounded mans-shadow" style="background-image:url(https://static.pexels.com/photos/1227/night-dark-blur-blurred-landscape.jpg);">
+
+
+                <div class="tab-content mans-text-balts" style="padding-top:3em;padding-left:3em;">
+
+                    <div id="home" class="tab-pane fade in active">
+
+                        <div class="ui search pull-right" style="padding-right:3em;">
+                            <div class="ui icon input">
+                                <input class="prompt" type="text" placeholder="Search countries...">
+                                <i class="search icon"></i>
+                            </div>
+                            <div class="results"></div>
+                        </div>
+                        
+                        <h1 id="TempID"></h1>
+                        <h1 id="Location"></h1>
+                        <h2 id="Conditions"></h2>
+                        <h3 id="Sky"></h3>
+                        
+                    </div>
+
+
+
+                    <div id="menu1" class="tab-pane fade">
+
+
+                        <div class="g-signin2" data-onsuccess="onSignIn">Sign In</div>
+                        <a href="#" onclick="signOut();">Sign out</a>
+                        <p>
+                            <h3 id="Vards">Hello Stranger!</h3>
+                            <h4 id="Epasts"></h4>
+                            <img id="googlePicture" onclick="showModal();" class="img-responsive img-circle pull-left" src="">
+                        </p>
+                        <div class="ui modal">
+                            <i class="close icon"></i>
+                            <div class="header">
+                                Profile Picture
+                            </div>
+                            <div class="image content">
+                                <div class="ui medium image">
+                                    <img id="googlePictureModal" class="img-responsive img-circle pull-left" src="">
+                                </div>
+                                <div class="description">
+                                    <div class="ui header">We've auto-chosen a profile image for you.</div>
+                                    <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+                                    <p>Is it okay to use this photo?</p>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <div class="ui black deny button">
+                                    Nope
+                                </div>
+                                <div class="ui positive right labeled icon button">
+                                    Yep, that's me
+                                    <i class="checkmark icon"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                     
+
+
+                    </div>
+
+
+                    <div id="menu2" class="tab-pane fade">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h3>Google URL Shortener API</h3>
+                                <input id="longURL" type="text" class="form-control pull-left" value="" />
+                                <p style="padding-top:3em;" ></p>
+                                <button id="URLShortener" class="btn btn-success pull-left" onclick="GoogleShortenURLAPI()">Shorten URL</button>
+                            </div>
+
+                            <div class="col-md-5">
+                                <h3>Result</h3>
+                                <a href="" id="ShortURL"></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="menu3" class="tab-pane fade">
+                        <h3>Google Maps API</h3>
+                               <input id="tags" class="form-control pull-left col-md-2" />
+                        <button id="Find" class="btn btn-success pull-left" onclick="initMap()">Find </button>
+                        <div id="map" style="width:600px;height:400px;background-color:transparent; color:black; "></div>
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzoqL7keahJJ_CdUTF_dJ_0MI2N4NSBsU&libraries=places"></script>
+                      
+                </div>
+
+                    <div id="menu4" class="tab-pane fade">
+                    
+                        |tSEST
+
+                    </div>
+
+                <ul class="nav nav-tabs" style="padding-top:12em;">
+                    <li class="active"><a data-toggle="tab" href="#home">Weather API</a></li>
+                    <li><a data-toggle="tab" href="#menu1">Google Auth0</a></li>
+                    <li><a data-toggle="tab" href="#menu2">URL Shortner API</a></li>
+                    <li><a data-toggle="tab" href="#menu3">Google Maps API test</a></li>
+                    <li><a data-toggle="tab" href="#menu4">SemanticUI</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+       
+
+
+    </div>
+</div>
+
+
+   
+    <script src="Scripts/MyWeather.js"></script>
+    <script src="Scripts/MyGoogleLogin.js"></script>
+    <script src="Scripts/MyURLShortner.js"></script>
+</body>
+</html>
