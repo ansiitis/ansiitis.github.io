@@ -4959,8 +4959,8 @@ a.badge:focus {
   padding-top: 30px;
   padding-bottom: 30px;
   margin-bottom: 30px;
-  color: inherit;
-  background-color: #eee;
+  /*color: inherit;
+  background-color: #eee;*/
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -6755,3 +6755,12 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+.mans-shadow {
+
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.mans-text-balts {
+color:white;
+}
